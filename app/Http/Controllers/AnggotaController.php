@@ -4,15 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Petugas extends Controller
+class AnggotaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('perpustakaan.petugas');
+        //
     }
+    public function anggota()
+    {
+        return view('perpustakaan.anggota');
+    }
+    
 
     /**
      * Show the form for creating a new resource.

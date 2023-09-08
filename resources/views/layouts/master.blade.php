@@ -12,7 +12,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{{ asset('template//plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('template/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('template/dist/css/adminlte.min.css')}}">
 </head>
@@ -20,13 +20,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 
   <!-- Navbar -->
- 
+  @include('separate.header')
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
+  @include('separate.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
-
+  @yield('content')
   <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->
@@ -34,7 +35,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.control-sidebar -->
 
   <!-- Main Footer -->
- 
+  @include('separate.footer')
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
@@ -44,6 +45,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- Bootstrap 4 -->
 <script src="{{ asset('template/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
+<script src="{{ asset('template/dist/js/adminlte.min.js')}}"></script>
 </body>
 </html>
