@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Anggota;
-use App\Http\Controllers\Buku;
-use App\Http\Controllers\Petugas;
+use App\Http\Controllers\{
+    AnggotaController, 
+    BukuController, 
+    PetugasController
+};
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,10 +20,10 @@ use App\Http\Controllers\Petugas;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('dashboard');
 
-Route::get('/anggota', [Anggota::class, 'index']);
+Route::get('/anggota', [AnggotaController::class, 'anggota'])->name('get_anggota');
 
-Route::get('/buku', [Buku::class, 'index']);
+Route::get('/buku', [BukuController::class, 'buku'])->name('get_buku');
 
-Route::get('/petugas', [Petugas::class, 'index']);
+Route::get('/petugas', [PetugasController::class, 'petugas'])->name('get_petugas');
